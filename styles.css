@@ -1,0 +1,239 @@
+:root {
+    --main: #292929;
+    --secondary: #6e6e6e;
+    --correct: #d3ffb5;
+    --incorrect: #faa89b;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 10vh 10vw;
+    background: #f2f2f2;
+    color: var(--main);
+}
+
+b {
+    font-weight: 800;
+}
+
+section {
+    margin-bottom: 5vh;
+    padding-top: 100px;
+    margin-top: -100px;
+}
+
+hr {
+    margin: 10vh 0;
+    border: none;
+    border-top: dotted 3px white;
+}
+
+h1 {
+    font-size: 86px;
+    line-height: 52px;
+    font-weight: 800;
+    margin-left: -5px;
+    margin-bottom: 25px;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p {
+    color: var(--secondary);
+    margin-bottom: 0;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 50vh;
+    margin-top: 5vh;
+    margin-bottom: 0;
+}
+
+.title > div {
+    border-left: solid 10px var(--main);
+    padding-left: 5vw;
+}
+
+.authors > a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: darksalmon;
+    white-space: nowrap;
+}
+
+.authors > a:hover,
+.accesspaper > p > a > i:hover {
+    color: salmon;
+}
+
+.accesspaper {
+    padding: 25px;
+    /*background: white;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accesspaper > p > a > i {
+    font-size: 48px;
+    margin: 10px;
+    color: darksalmon;
+}
+
+.data > a {
+    padding: 10px;
+    margin-right: 10px;
+    background: white;
+    line-height: 50px;
+    color: darksalmon;
+    text-decoration: none;
+}
+
+/*
+.exampletoggle > div:hover {
+    background: #ffdad6;
+    color: white;
+    cursor: pointer;
+}
+*/
+
+.data > a:hover,
+.exampletoggle > .active {
+    background: salmon !important;
+    color: white !important;
+}
+
+.exampletoggle > .active::after {
+    content: '';
+    position: absolute;
+    left: calc(50% - 10px);
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid salmon;
+    clear: both;
+}
+
+.exampletoggle {
+    margin: 20px 0;
+    display: flex;
+}
+
+.exampletoggle > div {
+    position: relative;
+    font-size: 24px;
+    padding: 10px 24px;
+    background: white;
+    color: darksalmon;
+    margin-right: 10px;
+}
+
+.examples > div {
+    padding: 25px;
+    background: white;
+    justify-content: space-between;
+    display: none;
+}
+
+.videos {
+    width: 40%;
+}
+
+.targetvid {
+    display: block;
+    width: calc(100% - 10px);
+}
+
+.referencevid {
+    width: calc(50% - 10px);
+    margin: 10px 5px 0 0;
+}
+
+.questions {
+    width: 58%;
+    padding-left: 2%;
+    border-left: solid 5px var(--main);
+}
+
+.questions > tag {
+    display: block;
+    border-top: dotted 1px #2b2b2b;
+    margin-top: 15px;
+}
+
+.questions > tag > span {
+    display: inline-block;
+    background: gray;
+    padding: 3px 9px;
+    margin-top: 15px;
+    color: white;
+    font-size: 12px;
+}
+
+p.ques {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--main);
+    margin: 10px 0;
+}
+
+p.ans,
+.choice.true {
+    padding: 3px 9px;
+    background: var(--correct);
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.choice.false {
+    padding: 3px 9px;
+    background: var(--incorrect);
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100px;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vh;
+    z-index: 1000;
+}
+
+.nav > p {
+    color: var(--main);
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.nav > p > a {
+    font-size: 16px;
+    text-decoration: none;
+    color: gray;
+    margin-left: 20px;
+}
+
+.nav > p > a:hover {
+    color: var(--main);
+    cursor: pointer;
+}
